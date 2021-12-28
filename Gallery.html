@@ -11,6 +11,7 @@
             Gallery page
         </title>
         <style>
+/*            colors:FF9999,FFEBCC,FBFFE2,FFAFAF*/
             body{
                 margin: 0;
                 font-family: 'Outfit', sans-serif;
@@ -27,12 +28,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                
             }
             #nav-bar{
                 display: flex;
                 width: 100vw;
                 justify-content: space-between;
-                background-color: #FA9621;
+                background-color: #FF9999;
                 height: 10vh;
             }
             #logo{
@@ -60,8 +62,8 @@
                 padding: 0 5px;
             }
             .menu-btn button{
-                background-color: #023047;
-                color: #ffff;
+                background-color: #FFEBCC;
+                color: black;
                 border-radius: 12px;
                 border: none;
                 padding: 10px;
@@ -69,7 +71,7 @@
             }
             .menu-btn button:hover{
                 background-color: #ffff;
-                color: #023047;
+                color: black;
                 box-shadow: 3px 2px 3px #969696;
                 cursor: pointer;
                 top: -3px;
@@ -80,14 +82,36 @@
             }
             .testimonial-1,.testimonial-2{
                 
-                background-color: aquamarine;
+                background-image: linear-gradient(to left,#FF9999,#FFAFAF,#FFEBCC);
                 margin-bottom: 30px;
                 display: flex;
                 flex-direction: row;
                 opacity: 0;
+                position: relative;
                 border-radius: 15px;
                 transition: opacity 1500ms ease-out;
             }   
+            .testimonial-2{
+                background-image: linear-gradient(to right,#FF9999,#FFAFAF,#FFEBCC);
+                box-shadow: 5px 5px 5px #cebebe;
+                top: -5px;
+                left: -5px;
+            }
+            .testimonial-1:hover{
+                background-image: linear-gradient(to right,#FF9999,#FFAFAF,#FFEBCC);
+                box-shadow: 5px 5px 5px #cebebe;
+                top: -5px;
+                left: -5px;
+            }
+            .testimonial-2:hover{
+                background-image: linear-gradient(to left,#FF9999,#FFAFAF,#FFEBCC);
+                box-shadow: 3px 2px 3px #FBFFE2;
+                top: -7px;
+                left: -7px;
+            }
+            .testimonial-1:hover main{
+                padding: 115px;
+            }
             .testimonial-2 img{
                 padding: 20px;
             }
@@ -114,6 +138,7 @@
                 padding: 35px;
                 border-radius: 50px;
             }
+            
             @keyframes move{
                 0%{
                     transform: translateX(-100%);
@@ -132,8 +157,8 @@
             }
         </style>
     </head>
-    <body onload="preloader1()">
-        <div id="preloader">I & H FOUNDATION</div>
+    <body>
+        <div id="preloader"><p>I & H FOUNDATION</p></div>
 
         <nav id="nav-bar">
             <h1 id="logo">I & H FOUNDATION</h1>
@@ -207,5 +232,6 @@
          fader1.forEach(fader1 => {
              appearOnScroll1.observe(fader1);
          });
+         window.onload = function(){ document.querySelector("#preloader").style.display = "none"; }
     </script>
 </html>   
