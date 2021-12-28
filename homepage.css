@@ -1,52 +1,210 @@
-*{
-    margin: 0;
-    padding: 0; 
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 /* Header */
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(Image/banner.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+.header {
+  height: 14vh;
+  width: 100%;
+  background-color: #f44366;
+  position: relative;
 }
-nav{
-    padding: 2% 4%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+nav {
+  padding: 1% 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav img{
-    width: 150px;
+nav img {
+  width: 112px;
 }
-.nav-links{
-    flex: 1;
-    text-align: right;
+.nav-links {
+  flex: 1;
+  text-align: right;
 }
-.nav-links ul li{
-    list-style: none;
-    padding: 8px 12px;
-    position: relative;
-    display: inline-block; 
+.nav-links ul li {
+  list-style: none;
+  padding: 8px 12px;
+  position: relative;
+  display: inline-block;
 }
 .nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
 }
-.nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    display: block;
-    background: #f44366;
-    margin: auto;
-    transition: 0.5s;
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  background: #fbffe2;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
 
+nav svg {
+  display: none;
 }
-.nav-links ul li:hover::after{
+/* Button for login or sign up */
+.login {
+  padding: 0.8% 2.5%;
+  background-color: #fbffe2;
+  color: black;
+  border-radius: 30px;
+  font-size: 18px;
+}
+/* media query for navbar*/
+@media (max-width: 700px) {
+  .nav-links ul li {
+    display: block;
+  }
+  .login {
+    display: none;
+  }
+  .nav-links {
+    position: absolute;
+    background: #f44366c2;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: -250px;
+    text-align: center;
+    z-index: 2;
+  }
+  nav svg {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+  .nav-links ul li {
+    padding: 25px;
+  }
+}
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: calc(100vh - 4rem);
+}
+.swiper-slide img {
+  height: 90vh;
+  width: 100%;
+}
+.swiper-horizontal > .swiper-scrollbar {
+  display: none;
+}
+/* About Branch */
+.head {
+  text-align: center;
+  margin: 2rem 0rem 2rem 0rem;
+  color: #568036;
+  font-size: 40px;
+  font-weight: 600;
+}
+.para p {
+  width: 80%;
+  height: 100%;
+  margin: 2rem 0rem 2rem 8rem;
+  line-height: 40px;
+}
+@media (max-width: 1000px) {
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
+  .para p {
+    margin: 2rem 0rem 2rem 6rem;
+  }
+}
+@media (max-width: 800px) {
+  .swiper {
+    height: 70vh;
+  }
+  .swiper-slide img {
     width: 100%;
+    height: 100%;
+  }
+  .head {
+    font-size: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .swiper {
+    height: 60vh;
+  }
+}
+@media (max-width: 600px) {
+  .swiper {
+    height: 40vh;
+  }
+  .para p {
+    width: 80%;
+    height: 100%;
+    margin: 2rem 0rem 2rem 3rem;
+    line-height: 40px;
+  }
+  .head {
+    font-size: 28px;
+  }
+}
+/* swiper */
+
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+.swiper-slide {
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+/* footer */
+/* Address */
+.footer {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #073047;
+}
+
+.content {
+  width: 55%;
+  color: #fff;
+  position: relative;
+  margin-left: 3%;
+}
+.iah {
+  margin-bottom: 7%;
+}
+.content svg {
+  width: 35px;
+  height: 35px;
+}
+/* social media */
+.icon {
+  width: 45%;
+}
+.IMG {
+  width: 90px;
+  height: 90px;
+}
+.copyright {
+  width: 100%;
+  height: 6vh;
+}
+.footer-last {
+  text-align: center;
+  padding: 1% 1%;
 }

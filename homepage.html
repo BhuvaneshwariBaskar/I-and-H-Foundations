@@ -1,29 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <title>I and H Foundations</title>
 </head>
+
 <body>
-       <!-- nav bar -->
-       <section class="header">
+    <!-- nav bar -->
+    <section class="header">
         <nav>
-            <a href="homepage.html" ><img src="./img1.png"></a>
+            <a href="homepage.html"><img src="./img1.png"></a>
             <div class="nav-links" id="navlinks">
-                <svg class="w-3 h-3" onclick="HideMenu()" fill="none" stroke="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="HideMenu()" class="h-3 w-3" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="homepage.html">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#courses">GALLERY</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+                    <button class="login">Log In</button>
+                    <!-- <button class="login">Sign Up</button> -->
                 </ul>
-                
+
+
             </div>
-            <svg class="w-3 h-3" onclick="ShowMenu()" fill="none" stroke="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="ShowMenu()" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
         </nav>
     </section>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./Images/help3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img2.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img3.png" alt=""></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- footer -->
+    <section class="footer">
+
+        <span class="content">
+            <div class="address-container">
+
+                <h1 class="iah">I and H Foundations</h1>
+                <div>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="location-svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd" />
+                        </svg></span>
+                    <span class="address">
+                        No.123 , ABC st , xyz ,Lorem Ipsum is simply dummy text of the <br>printing and typesetting
+                        industry.
+                    </span>
+                </div>
+                <div>
+                    <span class="mobspan s1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg></span>
+                    <span class="num">&nbsp; abcdefghijkl@gmail.com</span>
+
+                </div>
+                <div>
+                    <span class="mobspan s1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg></span>
+                    <span class="num">&nbsp; 91+ 987654321</span>
+                </div>
+            </div>
+        </span>
+        <span class="icon">
+            <div class="media">
+                <a href=""><img class="Wp IMG" src="./Images/Wp.png" alt=""></a>
+                <a href=""><img class="FM IMG" src="./Images/FM.png" alt=""></a>
+                <a href=""><img class="Im IMG" src="./Images/Im.png" alt=""></a>
+                <a href=""><img class="ln IMG" src="./Images/ln.png" alt=""></a>
+            </div>
+            <a href=""><img class="SM IMG" src="./Images/SM.png" alt=""></a>
+        </span>
+
+    </section>
+    <div class="copyright">
+        <div class="footer-last">&copy; Copyright I and H Foundations 2021</div>
+    </div>
+    <script src="./homepage.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </body>
+
 </html>

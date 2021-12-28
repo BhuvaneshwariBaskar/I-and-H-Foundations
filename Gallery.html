@@ -1,237 +1,297 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/a2697e2946.js" crossorigin="anonymous"></script>
-        <title>
-            Gallery page
-        </title>
-        <style>
-/*            colors:FF9999,FFEBCC,FBFFE2,FFAFAF*/
-            body{
-                margin: 0;
-                font-family: 'Outfit', sans-serif;
-                font-family: 'Poppins', sans-serif;
-            }
-            #preloader{
-                background-color: white;
-                width: 100vw;
-                height: 100vh;
-                position: fixed;
-                font-weight: 700;
-                cursor: pointer;
-                background: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-            }
-            #nav-bar{
-                display: flex;
-                width: 100vw;
-                justify-content: space-between;
-                background-color: #FF9999;
-                height: 10vh;
-            }
-            #logo{
-                margin: 0;
-                padding: 15px;
-                padding-left: 30px;
-                font-weight: 700;
-                cursor: pointer;
-            }
-            #menu{
-                list-style: none;
-                display: flex;
-                font-weight: 600;
-                margin: 0;
-                margin-right: 20px;
-                cursor: pointer;
-            }
-            .menu-option{
-                padding: 20px 21px;
-                
-            }
-            .menu-btn{
-                
-                margin: 15px 20px;
-                padding: 0 5px;
-            }
-            .menu-btn button{
-                background-color: #FFEBCC;
-                color: black;
-                border-radius: 12px;
-                border: none;
-                padding: 10px;
-                position: relative;
-            }
-            .menu-btn button:hover{
-                background-color: #ffff;
-                color: black;
-                box-shadow: 3px 2px 3px #969696;
-                cursor: pointer;
-                top: -3px;
-                left: -3px;
-            }
-            main{
-                padding: 120px;
-            }
-            .testimonial-1,.testimonial-2{
-                
-                background-image: linear-gradient(to left,#FF9999,#FFAFAF,#FFEBCC);
-                margin-bottom: 30px;
-                display: flex;
-                flex-direction: row;
-                opacity: 0;
-                position: relative;
-                border-radius: 15px;
-                transition: opacity 1500ms ease-out;
-            }   
-            .testimonial-2{
-                background-image: linear-gradient(to right,#FF9999,#FFAFAF,#FFEBCC);
-                box-shadow: 5px 5px 5px #cebebe;
-                top: -5px;
-                left: -5px;
-            }
-            .testimonial-1:hover{
-                background-image: linear-gradient(to right,#FF9999,#FFAFAF,#FFEBCC);
-                box-shadow: 5px 5px 5px #cebebe;
-                top: -5px;
-                left: -5px;
-            }
-            .testimonial-2:hover{
-                background-image: linear-gradient(to left,#FF9999,#FFAFAF,#FFEBCC);
-                box-shadow: 3px 2px 3px #FBFFE2;
-                top: -7px;
-                left: -7px;
-            }
-            .testimonial-1:hover main{
-                padding: 115px;
-            }
-            .testimonial-2 img{
-                padding: 20px;
-            }
-            .testimonial-2 p{
-                padding-left: 50px;
-            }
-            .testimonial-1.appear{
-                opacity: 1;
-                animation: move 1000ms;
-            }
-            .testimonial-2.appear{
-                opacity: 1;
-                animation: moves 1000ms;
-            }
-            main p{
-                width: 70vw;
-                padding: 20px;
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .testimonial-img{
-                width:150px;
-                height:150px;
-                padding: 35px;
-                border-radius: 50px;
-            }
-            
-            @keyframes move{
-                0%{
-                    transform: translateX(-100%);
-                }
-                100%{
-                    transform: translateX(0%);
-                }
-            }
-            @keyframes moves{
-                0%{
-                    transform: translateX(200%);
-                }
-                100%{
-                    transform: translateX(0%);
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div id="preloader"><p>I & H FOUNDATION</p></div>
 
-        <nav id="nav-bar">
-            <h1 id="logo">I & H FOUNDATION</h1>
-            <ul id="menu">
-                <li class="menu-option">HOME</li>
-                <li class="menu-option">ABOUT US</li>
-                <li class="menu-option">GALLERY</li>
-                <li class="menu-option">CONTACT US</li>
-                <li class="menu-btn"><button>LOG IN</button></li>
-                <li class="menu-btn"><button>SIGN UP</button></li>
-            </ul>
-        </nav>
-        <main>
-            <article class="testimonial-1">
-                <img src="IMG_20211112_222224.jpg" class="testimonial-img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et, euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-            </article>
-            <article class="testimonial-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et, euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-                <img src="IMG_20211112_222224.jpg" class="testimonial-img">
-            </article>
-            <article class="testimonial-1">
-                <img src="IMG_20211112_222224.jpg" class="testimonial-img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et, euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-            </article>
-            <article class="testimonial-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et, euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-                <img src="IMG_20211112_222224.jpg" class="testimonial-img">
-            </article>
-            <article class="testimonial-1">
-                <img src="IMG_20211112_222224.jpg" class="testimonial-img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et, euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-            </article>
-            <article class="testimonial-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et, euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-                <img src="IMG_20211112_222224.jpg" class="testimonial-img">
-            </article>
-        </main>
-    </body>
-    <script>
-         const fader= document.querySelectorAll('.testimonial-1');
-         const appearOptions = {};
-         const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
-             entries.forEach(entry => {
-                 if(!entry.isIntersecting) {
-                     return;
-                 } else{
-                     entry.target.classList.add('appear');
-                     appearOnScroll.unobserve(entry.target);
-                 }
-             })
-         }, appearOptions);
-        
-         fader.forEach(fader => {
-             appearOnScroll.observe(fader);
-         });
-         // second section
-         const fader1= document.querySelectorAll('.testimonial-2');
-         const appearOptions1 = {}
-         const appearOnScroll1 = new IntersectionObserver(function(entries1,appearOnScroll1) {
-             entries1.forEach(entry1 => {
-                 if(!entry1.isIntersecting) {
-                     return;
-                 } else{
-                     entry1.target.classList.add('appear');
-                     appearOnScroll1.unobserve(entry1.target);
-                 }
-             })
-         }, appearOptions1);
-        
-         fader1.forEach(fader1 => {
-             appearOnScroll1.observe(fader1);
-         });
-         window.onload = function(){ document.querySelector("#preloader").style.display = "none"; }
-    </script>
-</html>   
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a2697e2946.js" crossorigin="anonymous"></script>
+    <title>
+        Gallery page
+    </title>
+    <style>
+        /*            colors:FF9999,FFEBCC,FBFFE2,FFAFAF*/
+        body {
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #preloader {
+            background-color: white;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            font-weight: 700;
+            cursor: pointer;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #nav-bar {
+            display: flex;
+            width: 100vw;
+            justify-content: space-between;
+            background-color: #FF9999;
+            height: 10vh;
+        }
+
+        #logo {
+            margin: 0;
+            padding: 15px;
+            padding-left: 30px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        #menu {
+            list-style: none;
+            display: flex;
+            font-weight: 600;
+            margin: 0;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .menu-option {
+            padding: 20px 21px;
+
+        }
+
+        .menu-btn {
+
+            margin: 15px 20px;
+            padding: 0 5px;
+        }
+
+        .menu-btn button {
+            background-color: #FFEBCC;
+            color: black;
+            border-radius: 12px;
+            border: none;
+            padding: 10px;
+            position: relative;
+        }
+
+        .menu-btn button:hover {
+            background-color: #ffff;
+            color: black;
+            box-shadow: 3px 2px 3px #969696;
+            cursor: pointer;
+            top: -3px;
+            left: -3px;
+        }
+
+        main {
+            padding: 120px;
+        }
+
+        .testimonial-1,
+        .testimonial-2 {
+
+            background-image: linear-gradient(to left, #FF9999, #FFAFAF, #FFEBCC);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: row;
+            opacity: 0;
+            position: relative;
+            border-radius: 15px;
+            transition: opacity 1500ms ease-out;
+        }
+
+        .testimonial-2 {
+            background-image: linear-gradient(to right, #FF9999, #FFAFAF, #FFEBCC);
+            box-shadow: 5px 5px 5px #cebebe;
+            top: -5px;
+            left: -5px;
+        }
+
+        .testimonial-1:hover {
+            background-image: linear-gradient(to right, #FF9999, #FFAFAF, #FFEBCC);
+            box-shadow: 5px 5px 5px #cebebe;
+            top: -5px;
+            left: -5px;
+        }
+
+        .testimonial-2:hover {
+            background-image: linear-gradient(to left, #FF9999, #FFAFAF, #FFEBCC);
+            box-shadow: 3px 2px 3px #FBFFE2;
+            top: -7px;
+            left: -7px;
+        }
+
+        .testimonial-1:hover main {
+            padding: 115px;
+        }
+
+        .testimonial-2 img {
+            padding: 20px;
+        }
+
+        .testimonial-2 p {
+            padding-left: 50px;
+        }
+
+        .testimonial-1.appear {
+            opacity: 1;
+            animation: move 1000ms;
+        }
+
+        .testimonial-2.appear {
+            opacity: 1;
+            animation: moves 1000ms;
+        }
+
+        main p {
+            width: 70vw;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-img {
+            width: 150px;
+            height: 150px;
+            padding: 35px;
+            border-radius: 50px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes moves {
+            0% {
+                transform: translateX(200%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <p>I & H FOUNDATION</p>
+    </div>
+
+    <nav id="nav-bar">
+        <h1 id="logo">I & H FOUNDATION</h1>
+        <ul id="menu">
+            <li class="menu-option">HOME</li>
+            <li class="menu-option">ABOUT US</li>
+            <li class="menu-option">GALLERY</li>
+            <li class="menu-option">CONTACT US</li>
+            <li class="menu-btn"><button>LOG IN</button></li>
+            <li class="menu-btn"><button>SIGN UP</button></li>
+        </ul>
+    </nav>
+    <main>
+        <article class="testimonial-1">
+            <img src="IMG_20211112_222224.jpg" class="testimonial-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et,
+                euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula
+                tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo
+                sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae;</p>
+        </article>
+        <article class="testimonial-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et,
+                euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula
+                tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo
+                sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae;</p>
+            <img src="IMG_20211112_222224.jpg" class="testimonial-img">
+        </article>
+        <article class="testimonial-1">
+            <img src="IMG_20211112_222224.jpg" class="testimonial-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et,
+                euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula
+                tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo
+                sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae;</p>
+        </article>
+        <article class="testimonial-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et,
+                euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula
+                tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo
+                sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae;</p>
+            <img src="IMG_20211112_222224.jpg" class="testimonial-img">
+        </article>
+        <article class="testimonial-1">
+            <img src="IMG_20211112_222224.jpg" class="testimonial-img">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et,
+                euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula
+                tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo
+                sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae;</p>
+        </article>
+        <article class="testimonial-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl ipsum, mollis tempor lobortis et,
+                euismod tristique urna. Ut ultrices enim et mauris convallis, quis euismod odio bibendum. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Nullam blandit ultricies mauris, a sollicitudin ligula
+                tincidunt posuere. Aenean nisl eros, rhoncus a odio elementum, tempor commodo felis. Praesent commodo
+                sapien eros, quis venenatis nisi facilisis et. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae;</p>
+            <img src="IMG_20211112_222224.jpg" class="testimonial-img">
+        </article>
+    </main>
+</body>
+<script>
+    const fader = document.querySelectorAll('.testimonial-1');
+    const appearOptions = {};
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    }, appearOptions);
+
+    fader.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+    // second section
+    const fader1 = document.querySelectorAll('.testimonial-2');
+    const appearOptions1 = {}
+    const appearOnScroll1 = new IntersectionObserver(function (entries1, appearOnScroll1) {
+        entries1.forEach(entry1 => {
+            if (!entry1.isIntersecting) {
+                return;
+            } else {
+                entry1.target.classList.add('appear');
+                appearOnScroll1.unobserve(entry1.target);
+            }
+        })
+    }, appearOptions1);
+
+    fader1.forEach(fader1 => {
+        appearOnScroll1.observe(fader1);
+    });
+    window.onload = function () { document.querySelector("#preloader").style.display = "none"; }
+</script>
+
+</html>
